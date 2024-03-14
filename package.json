@@ -11,6 +11,6 @@
     "jest": "^29.7.0"
   },
   "dependencies": {
-    "ioredis": "^4.14.0"
+    "ioredis": "^v5.3.2"
   }
 }
