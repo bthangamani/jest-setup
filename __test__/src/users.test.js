@@ -1,16 +1,14 @@
 import axios from 'axios';
 import Users from '../../src/users.js';
 import { jest } from '@jest/globals';
-// jest.mock('axios', jest.fn(() => {
-//   return {
-//     get: jest.fn()
-//   }
-// }));
 
-axios = jest.fn(() => {
-  return {
-    get: jest.fn()
-  }
+// jest.mock('axios');
+jest.mock('axios', () => {
+  return jest.fn(() => {
+    return {
+      get: jest.fn()
+    }
+  })
 });
 
 test('should fetch users', () => {
